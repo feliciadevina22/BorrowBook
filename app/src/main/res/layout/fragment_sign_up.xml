@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_sign_up"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.auth.SignUpFragment">
+
+    <include
+        android:id="@+id/toolbar_auth"
+        layout="@layout/toolbar_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/one_half_size"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:textSize="@dimen/text_gianterter"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sign_up_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/one_half_size"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:elevation="@dimen/half_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_sign_up_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_mediumsmall" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sign_up_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/one_half_size"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:elevation="@dimen/half_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_sign_up_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/text_mediumsmall" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sign_up_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/one_half_size"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:passwordToggleEnabled="true"
+            android:elevation="@dimen/half_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_sign_up_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_mediumsmall" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_sign_up_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Password yang anda masukkan salah"
+            android:layout_marginTop="@dimen/default_size"
+            android:layout_marginHorizontal="@dimen/double_size"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            />
+
+        <RadioGroup
+            android:id="@+id/rg_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/half_size"
+            android:gravity="fill_horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="User"/>
+
+            <RadioButton
+                android:id="@+id/rb_staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staff"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:layout_marginTop="@dimen/default_size"/>
+
+    </LinearLayout>
+</FrameLayout>

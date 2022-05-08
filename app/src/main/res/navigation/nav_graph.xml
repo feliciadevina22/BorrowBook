@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/catalogueFragment">
+    <fragment
+        android:id="@+id/catalogueFragment"
+        android:name="com.example.borrowbook.view.home.CatalogueFragment"
+        android:label="fragment_catalogue"
+        tools:layout="@layout/fragment_catalogue" >
+        <action
+            android:id="@+id/action_catalogueFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordListFragment"
+        android:name="com.example.borrowbook.view.home.RecordListFragment"
+        android:label="fragment_record_list"
+        tools:layout="@layout/fragment_record_list" >
+        <action
+            android:id="@+id/action_recordListFragment_to_addRecordFragment"
+            app:destination="@id/addRecordFragment" />
+        <action
+            android:id="@+id/action_recordListFragment_to_recordDetailFragment"
+            app:destination="@id/recordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.example.borrowbook.view.home.BookDetailFragment"
+        android:label="fragment_book_detail"
+        tools:layout="@layout/fragment_book_detail" >
+        <argument
+            android:name="book"
+            app:argType="com.example.borrowbook.data.model.BookLocal" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecordFragment"
+        android:name="com.example.borrowbook.view.home.AddRecordFragment"
+        android:label="fragment_add_record"
+        tools:layout="@layout/fragment_add_record" />
+    <fragment
+        android:id="@+id/recordDetailFragment"
+        android:name="com.example.borrowbook.view.home.RecordDetailFragment"
+        android:label="fragment_record_detail"
+        tools:layout="@layout/fragment_record_detail" >
+        <argument
+            android:name="allRecord"
+            app:argType="com.example.borrowbook.data.model.AllRecord" />
+    </fragment>
+</navigation>

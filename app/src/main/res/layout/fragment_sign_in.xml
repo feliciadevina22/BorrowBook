@@ -1,0 +1,134 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.auth.SignInFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="@dimen/half_size"
+            android:textSize="@dimen/text_gianterter"
+            android:layout_marginHorizontal="@dimen/one_half_size"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sign_in_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/one_half_size"
+            android:layout_marginHorizontal="@dimen/default_size"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:elevation="@dimen/half_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_sign_in_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_mediumsmall" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sign_in_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="@dimen/one_half_size"
+            android:layout_marginHorizontal="@dimen/default_size"
+            android:elevation="@dimen/half_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_sign_in_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_mediumsmall" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password yang anda masukkan salah"
+            android:layout_marginTop="@dimen/half_size"
+            android:layout_marginHorizontal="@dimen/one_half_size"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_sing_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:layout_marginTop="@dimen/double_size"
+            android:layout_marginHorizontal="@dimen/default_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/one_half_size">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Don't have an Account?"
+                android:textSize="@dimen/text_mediumsmallest"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quarter_size"
+                android:text="Sign Up"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/half_size">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Or"
+                android:textSize="@dimen/text_mediumsmallest"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_skip"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quarter_size"
+                android:text="Sign in as Guest"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

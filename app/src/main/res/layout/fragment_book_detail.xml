@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home.BookDetailFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_book_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_book_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_size">
+
+            <include
+                android:id="@+id/toolbar_main"
+                layout="@layout/toolbar_default" />
+
+            <ImageView
+                android:id="@+id/iv_book_detail_pic"
+                android:layout_width="@dimen/img_book_detail_width"
+                android:layout_height="@dimen/img_book_detail_height"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+                android:clipToOutline="true"
+                android:src="@color/shadow" />
+
+            <TextView
+                android:id="@+id/tv_book_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/one_half_size"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                tools:text="Kesehatan Mental Perspektif Psikologis dan Agama" />
+
+            <TextView
+                android:id="@+id/tv_book_detail_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Prof. Dr. Syamsu Yusuf LNr"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/half_size"/>
+
+            <TextView
+                android:id="@+id/tv_book_detail_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_size"
+                android:textSize="@dimen/text_small"
+                android:layout_gravity="end"
+                android:text="456 Page"/>
+
+            <TextView
+                android:id="@+id/tv_book_detail_isbn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_size"
+                android:text="ISBN : 1eds41cvs56d56"
+                android:layout_gravity="end"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:layout_gravity="start"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_mediumsmallest"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/default_size"/>
+
+            <TextView
+                android:id="@+id/tv_book_detail_more_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Kesehatan jiwa bukan hanya sebagai bentuk ilmu pengetahuan populer tetapi menjadi ilmu pengetahuan yang diajarkan sebagai mata ajaran dalam jenjang tingkat akademi strata-1 maupun pascasarjana, juga dalam kaitan dengan ilmu-ilmu lain. Dalam hal ini telah penulis perkenalkan ilmu kesehatan jiwa sebagai ajaran akademi sejak 1969 di Indonesia."
+                android:layout_gravity="start"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/default_size"/>
+
+            <TextView
+                android:id="@+id/tv_book_loan_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Book is Not Available"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_huge"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/default_size"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

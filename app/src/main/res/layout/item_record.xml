@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/half_size">
+
+    <data class="RecordBinding">
+        <variable
+            name="allRecord"
+            type="com.example.borrowbook.data.model.AllRecord" />
+        <variable
+            name="listener"
+            type="com.example.borrowbook.viewInterface.RecordInterface" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/one_half_size"
+        android:onClick="@{() -> listener.onSelected(allRecord)}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_purple"
+            android:padding="@dimen/half_size">
+
+            <TextView
+                android:id="@+id/tv_record_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/half_size"
+                tools:text="1"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_huge"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/half_size"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_record_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="129 - Best Way to Eat"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_mediumsmall"/>
+
+                <TextView
+                    android:id="@+id/tv_record_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Shelina - 0206011810003"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_medium"/>
+
+                <TextView
+                    android:id="@+id/tv_record_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Borrow Date: 12 May 2022"
+                    android:layout_marginTop="@dimen/half_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_mediumsmallest"/>
+
+                <TextView
+                    android:id="@+id/tv_record_due"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Due Date: 17 May 2022"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_mediumsmallest"/>
+
+                <TextView
+                    android:id="@+id/tv_record_return"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Return Date: 15 May 2022"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_700"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_mediumsmallest"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
